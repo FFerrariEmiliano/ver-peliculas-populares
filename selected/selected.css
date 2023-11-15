@@ -6,6 +6,17 @@ body{
     background-attachment: fixed;
 }
 
+@keyframes appear {
+    from{
+        opacity: 0;
+        transform: translate(-15px, -15px);
+    }
+    to {
+        opacity: 1;
+        transform: translate(0px, 0px);
+    }
+}
+
 ::-webkit-scrollbar {
     width: 3px; /* Ancho de la barra de desplazamiento */
 }
@@ -20,6 +31,11 @@ body{
     justify-content: center;
     margin: 20px;
     color: #fff;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    animation: 1s appear forwards;
+    overflow: hidden;
 }
 
 
@@ -32,6 +48,26 @@ body{
     position: relative;
     max-width: 204px;
     margin: 0 30px;
+    #trailer-link{
+            position: absolute;
+            bottom: 75px;
+            right: -17.5px;
+            height: 35px;
+            width: 35px;
+            border-radius: 50%;
+            display: none;
+            justify-content: center;
+            align-items: center;
+            color: #5c5;
+            border: 2px solid #fff;
+            transform: rotateZ(-45deg);
+            z-index: 200;
+            background-color: #222;
+            text-decoration: none;
+            .fa-play{
+                transform: rotate(45deg);
+            }
+    }
     #poster{
         height: 300px;
         width: 204px;
@@ -42,9 +78,8 @@ body{
     }
     #average-vote{
         position: absolute;
-        top: 283px;
+        bottom: 25px;
         right: -17.5px;
-        background-color: #222;
         height: 35px;
         width: 35px;
         border-radius: 50%;
@@ -52,11 +87,10 @@ body{
         justify-content: center;
         align-items: center;
         color: #5c5;
-        border-bottom: 2px solid #fff;
-        border-left: 2px solid transparent;
-        border-right: 2px solid #fff;
-        border-top: 2px solid transparent;
+        border: 2px solid #fff;
         transform: rotateZ(-45deg);
+        z-index: 200;
+        background-color: #222;
         #span-av-num{
             transform: rotateZ(45deg);
         }
@@ -69,17 +103,21 @@ body{
         border: 2px solid #fff;
         border-top: transparent;
         width: 92px;
+        height: 18px;
     }
 }
 
 #desc{
     position: relative;
+    padding: 15px;
+    width: 100%;
     #movie-title{
         margin: 0 0 10px 0;
     }
     #tagline{
-        font-weight: 100;
+        font-weight:1;
         color: #bbb;
+        font-style: italic;
     }
     #movie-desc{
         max-height: 244px;
@@ -105,25 +143,12 @@ body{
     #movie-result{
         flex-direction: column;
         align-items: center;
-    }
-    #path{
-        #average-vote{
-            border: 2px solid #FFF;
-        }
+        margin-top: 60px;
     }
     #desc{
         #movie-title{
             margin-top: 20px;
         }
-    }
-}
-
-@keyframes appear {
-    from{
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
     }
 }
 

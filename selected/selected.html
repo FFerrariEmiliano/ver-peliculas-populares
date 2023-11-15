@@ -7,21 +7,30 @@
 </head>
 <body>
     <section id="movie-result">
-        <!-- <div id="path">
-            <img id="poster" src="https://tmdb.org/t/p/w500/${localResult.poster_path}" alt="${localResult.title}-path">
-            <span id="average-vote">${localResult.vote_average.toFixed(1)}</span>
-            <p id="publication-date">${localResult.release_date}</p>
+        <div id="path">
+            <a id="trailer-link" title="ver trailer" target="_blank" href="">
+                <i class="fa-solid fa-play"></i>
+            </a>
+            <img id="poster" src="" alt="">
+            <span id="average-vote">
+                <p id="span-av-num" title="2150 votos"></p>
+            </span>
+            <p id="publication-date"></p>
+            <p id="country"></p>
         </div>
         <div id="desc">
-            <h2 id="movie-title">${localResult.title}</h2>
-            <p id="movie-desc">${localResult.overview}</p>
-        </div>   -->
+            <h2 id="movie-title"></h2>
+            <h3 id="tagline"></h3>
+            <p id="movie-desc"></p>
+        </div>
     </section>
+    
     <section id="similares-section">
         <h3>similares</h3>
         <div id="similares">
         </div>
     </section>
     <script src="selected.js"></script>
+    <script src="https://kit.fontawesome.com/fe6ac2c5e5.js" crossorigin="anonymous"></script>
 </body>
 </html>
